@@ -1,6 +1,7 @@
 # coding:utf-8
 import requests
 from hashlib import md5
+from pyquery import PyQuery as pq
 
 
 class RClient(object):
