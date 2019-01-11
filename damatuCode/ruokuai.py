@@ -36,6 +36,11 @@ class RClient(object):
         r = requests.post('http://api.ruokuai.com/create.json', data=params, files=files, headers=self.headers)
         print(r)
         return r.json()
+    def rk_free_create(self, im):
+        files = {'file': ('a.jpg', im, 'image/jpg')}
+        r = requests.post('http://103.46.128.47:47720/', files=files)
+        print("返回的html-----------------"+r.text)
+        return pq(r.text)('B').text()
 
     def rk_report_error(self, im_id):
         """
