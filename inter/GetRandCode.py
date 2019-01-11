@@ -30,6 +30,10 @@ def getRandCode(is_auto_code, auto_code_type, result):
                     if "Error" in Result and Result["Error"]:
                         print(u"打码平台错误: {0}, 请登录打码平台查看-http://www.ruokuai.com/client/index?6726".format(Result["Error"]))
                         return ""
+            if auto_code_type == 3:
+                rc = RClient(_get_yaml()["auto_code_account"]["user"], _get_yaml()["auto_code_account"]["pwd"])
+                a = rc.rk_free_create(result)
+                return codexy(Ofset=",".join(a), is_raw_input=False)
         else:
             img = Image.open('./tkcode.png')
             img.show()
