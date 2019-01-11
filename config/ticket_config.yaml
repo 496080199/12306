@@ -75,7 +75,8 @@ ticket_black_list_time: 5
 is_auto_code: True
 
 # 打码平台， 2 为若快平台（目前只支持若快平台打码，打码兔已经关闭）, 若快注册地址：http://www.ruokuai.com/client/index?6726
-auto_code_type: 2
+# 3为免费打码平台，地址：http://103.46.128.47:47720/
+auto_code_type: 3
 
 # 打码平台账号
 auto_code_account:
